@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "meta_title": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "product"
+    },
+    "permonth": {
+      "type": "string"
+    },
+    "Transactions": {
+      "type": "integer"
+    },
+    "cashback": {
+      "type": "decimal"
+    },
+    "Limit": {
+      "type": "string"
+    }
+  }
+}
